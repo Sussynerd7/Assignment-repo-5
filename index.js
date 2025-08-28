@@ -36,11 +36,12 @@ document.getElementById('callerbtn-nation').addEventListener('click', function (
     
     let coinstring = document.getElementById('coin')
     let coinnumber = Number(coinstring.textContent)
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
+  
+    if (coinnumber < 20) {
         alert("Invlid Coins")
     } else {
+          let newcoin = coinnumber - 20;
+    document.getElementById('coin').innerText = newcoin;
         alert("📞 Calling National Emergency Service")
     }
 
@@ -66,11 +67,12 @@ document.getElementById('historybox').appendChild(p);
 document.getElementById('callerbtn-police').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
     let coinnumber = Number(coinstring.textContent)
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
+  
+    if (coinnumber < 20) {
         alert("Invlid Coins")
     } else {
+          let newcoin = coinnumber - 20;
+    document.getElementById('coin').innerText = newcoin;
         alert("📞 Calling Police Helpline")
         
     }
@@ -95,11 +97,12 @@ document.getElementById('historybox').appendChild(p);
 document.getElementById('callerbtn-fire').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
     let coinnumber = Number(coinstring.textContent)
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
+    
+    if (coinnumber < 20) {
         alert("Invlid Coins")
     } else {
+        let newcoin = coinnumber - 20;
+    document.getElementById('coin').innerText = newcoin;
         alert("📞 Calling fire service")
     }
    
@@ -122,11 +125,12 @@ document.getElementById('historybox').appendChild(p);
 document.getElementById('callerbtn-ambulance').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
     let coinnumber = Number(coinstring.textContent)
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
+   
+    if (coinnumber < 20) {
         alert("Invlid Coins")
     } else {
+         let newcoin = coinnumber - 20;
+    document.getElementById('coin').innerText = newcoin;
         alert("📞 Calling Ambulance service 1994-999999")
     }
         
@@ -152,9 +156,11 @@ document.getElementById('callerbtn-women').addEventListener('click', function ()
     let coinnumber = Number(coinstring.textContent)
     let newcoin = coinnumber - 20;
     document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
+    if (coinnumber < 20) {
         alert("Invlid Coins")
     } else {
+        let newcoin = coinnumber - 20;
+    document.getElementById('coin').innerText = newcoin;
         alert("📞 Calling Women Child Helpline 109")
     }
         
@@ -178,12 +184,14 @@ document.getElementById('historybox').appendChild(p);
 document.getElementById('callerbtn-dudok').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
     let coinnumber = Number(coinstring.textContent)
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
+    
+    if (coinnumber < 20) {
         alert("Invlid Coins")
     } else {
+           let newcoin = coinnumber - 20;
+    document.getElementById('coin').innerText = newcoin;
         alert("📞 Calling anti corruption helpline 106")
+        
     }
         
    
