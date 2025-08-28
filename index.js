@@ -1,10 +1,22 @@
-// let coinstring = document.getElementById('coin')
 
-// let coinnumber = Number(coinstring.textContent)
+const copyButtons = document.querySelectorAll('.copy-btn');
+const counter = document.getElementById('copycount');
 
+copyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        
+        const phoneNumber = this.getAttribute('data-number');
 
-// Fix for all copy buttons
-
+               navigator.clipboard.writeText(phoneNumber).then(() => {
+            alert(`Copied ${phoneNumber} to clipboard`);
+            
+            
+            let currentcount = parseInt(counter.textContent);
+            currentcount = currentcount + 1;
+            counter.textContent = currentcount;
+        });
+    });
+});
 
 const copyhearted = document.querySelectorAll('button[id="heartbtn"]');
 const heartcounter = document.getElementById('heart');
@@ -14,30 +26,16 @@ copyhearted.forEach(button => {
         let currentheartcount = parseInt(heartcounter.textContent);
         currentheartcount = currentheartcount + 1;
         heartcounter.textContent = currentheartcount;
-        
-       
     });
 });
 
 
-const copyButtons = document.querySelectorAll('button[id="copybtn"]');
-const counter = document.getElementById('copycount');
 
-copyButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        let currentcount = parseInt(counter.textContent);
-        currentcount = currentcount + 1;
-        counter.textContent = currentcount;
-        
-       
-    });
-});
 
 document.getElementById('callerbtn-nation').addEventListener('click', function () {
+    
     let coinstring = document.getElementById('coin')
-
     let coinnumber = Number(coinstring.textContent)
-
     let newcoin = coinnumber - 20;
     document.getElementById('coin').innerText = newcoin;
     if (newcoin < 20) {
@@ -45,34 +43,58 @@ document.getElementById('callerbtn-nation').addEventListener('click', function (
     } else {
         alert("📞 Calling National Emergency Service")
     }
+
+  
+
+
+    const h1s = this.closest('.bg-white').querySelectorAll('h1');
+
+  const myclock = new Date().toLocaleTimeString();
+
+let text = Array.from(h1s).map(h1 => h1.textContent).join(' - ');
+
+
+const p = document.createElement('p');
+p.textContent = text + ' - '+myclock;
+
+
+document.getElementById('historybox').appendChild(p);
+;
+
 });
-// national national
-// national national
-// national national
-// national national
+
 document.getElementById('callerbtn-police').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
-
     let coinnumber = Number(coinstring.textContent)
-
     let newcoin = coinnumber - 20;
     document.getElementById('coin').innerText = newcoin;
     if (newcoin < 20) {
         alert("Invlid Coins")
     } else {
         alert("📞 Calling Police Helpline")
+        
     }
+        
+   
+    const h1s = this.closest('.bg-white').querySelectorAll('h1');
+
+  const myclock = new Date().toLocaleTimeString();
+
+let text = Array.from(h1s).map(h1 => h1.textContent).join(' - ');
+
+
+const p = document.createElement('p');
+p.textContent = text + ' - '+myclock;
+
+
+document.getElementById('historybox').appendChild(p);
+;
+
 })
 
-// police police
-// police police
-// police police
-// police police
 document.getElementById('callerbtn-fire').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
-
     let coinnumber = Number(coinstring.textContent)
-
     let newcoin = coinnumber - 20;
     document.getElementById('coin').innerText = newcoin;
     if (newcoin < 20) {
@@ -80,16 +102,26 @@ document.getElementById('callerbtn-fire').addEventListener('click', function () 
     } else {
         alert("📞 Calling fire service")
     }
+   
+    const h1s = this.closest('.bg-white').querySelectorAll('h1');
+
+  const myclock = new Date().toLocaleTimeString();
+
+let text = Array.from(h1s).map(h1 => h1.textContent).join(' - ');
+
+
+const p = document.createElement('p');
+p.textContent = text + ' - '+myclock;
+
+
+document.getElementById('historybox').appendChild(p);
+;
+
 });
-// fire
-// fire
-// fire
-// fire
+
 document.getElementById('callerbtn-ambulance').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
-
     let coinnumber = Number(coinstring.textContent)
-
     let newcoin = coinnumber - 20;
     document.getElementById('coin').innerText = newcoin;
     if (newcoin < 20) {
@@ -97,18 +129,27 @@ document.getElementById('callerbtn-ambulance').addEventListener('click', functio
     } else {
         alert("📞 Calling Ambulance service 1994-999999")
     }
-})
+        
+    
+    const h1s = this.closest('.bg-white').querySelectorAll('h1');
 
-// ambulance
-// ambulance
-// ambulance
-// ambulance
+  const myclock = new Date().toLocaleTimeString();
+
+let text = Array.from(h1s).map(h1 => h1.textContent).join(' - ');
+
+
+const p = document.createElement('p');
+p.textContent = text + ' - '+myclock;
+
+
+document.getElementById('historybox').appendChild(p);
+;
+
+})
 
 document.getElementById('callerbtn-women').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
-
     let coinnumber = Number(coinstring.textContent)
-
     let newcoin = coinnumber - 20;
     document.getElementById('coin').innerText = newcoin;
     if (newcoin < 20) {
@@ -116,15 +157,27 @@ document.getElementById('callerbtn-women').addEventListener('click', function ()
     } else {
         alert("📞 Calling Women Child Helpline 109")
     }
+        
+   
+    const h1s = this.closest('.bg-white').querySelectorAll('h1');
+
+  const myclock = new Date().toLocaleTimeString();
+
+let text = Array.from(h1s).map(h1 => h1.textContent).join(' - ');
+
+
+const p = document.createElement('p');
+p.textContent = text + ' - '+myclock;
+
+
+document.getElementById('historybox').appendChild(p);
+;
+
 })
-// women
-// women
-// women
+
 document.getElementById('callerbtn-dudok').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
-
     let coinnumber = Number(coinstring.textContent)
-
     let newcoin = coinnumber - 20;
     document.getElementById('coin').innerText = newcoin;
     if (newcoin < 20) {
@@ -132,44 +185,40 @@ document.getElementById('callerbtn-dudok').addEventListener('click', function ()
     } else {
         alert("📞 Calling anti corruption helpline 106")
     }
+        
+   
+    const h1s = this.closest('.bg-white').querySelectorAll('h1');
+
+  const myclock = new Date().toLocaleTimeString();
+
+let text = Array.from(h1s).map(h1 => h1.textContent).join(' - ');
+
+
+const p = document.createElement('p');
+p.textContent = text + ' - '+myclock;
+
+
+document.getElementById('historybox').appendChild(p);
+;
+
 })
 
-document.getElementById('callerbtn-electricity').addEventListener('click', function () {
-    let coinstring = document.getElementById('coin')
 
-    let coinnumber = Number(coinstring.textContent)
+document.getElementById('clearbtn').addEventListener('click', function () {
+    const historyBox = document.getElementById('historybox');
+    historyBox.innerHTML = `
+      <div class="flex justify-between ">
+        <h1 class="font-[40px]"> <i class="fa-solid fa-clock"></i>HISTORY</h1>
+        <button id="clearbtn" class="bg-green-500 text-white p-2 rounded-md ">
+          <i class="fa-solid fa-brush"></i> Clear
+        </button>
+      </div>
+    `;
+   
+    document.getElementById('clearbtn').addEventListener('click', );
+});
 
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
-        alert("Invlid Coins")
-    } else {
-        alert("📞 Calling electricity helpline 16216")
-    }
-})
-document.getElementById('callerbtn-brac').addEventListener('click', function () {
-    let coinstring = document.getElementById('coin')
 
-    let coinnumber = Number(coinstring.textContent)
 
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
-        alert("Invlid Coins")
-    } else {
-        alert("📞 Calling Brac Helpline 16445")
-    }
-})
-document.getElementById('callerbtn-railway').addEventListener('click', function () {
-    let coinstring = document.getElementById('coin')
 
-    let coinnumber = Number(coinstring.textContent)
 
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
-    if (newcoin < 20) {
-        alert("Invlid Coins")
-    } else {
-        alert("📞 Calling Bangladesh railway helpline 163")
-    }
-})
