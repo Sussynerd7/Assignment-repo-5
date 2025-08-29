@@ -36,13 +36,14 @@ document.getElementById('callerbtn-nation').addEventListener('click', function (
     
     let coinstring = document.getElementById('coin')
     let coinnumber = Number(coinstring.textContent)
-  
+         let newcoin = coinnumber - 20;
+    document.getElementById('coin').innerText = newcoin;
     if (coinnumber < 20) {
         alert("Invlid Coins")
     } else {
-          let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
+   
         alert("📞 Calling National Emergency Service")
+        return
     }
 
   
