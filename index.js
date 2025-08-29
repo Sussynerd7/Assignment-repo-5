@@ -159,8 +159,7 @@ document.getElementById('historybox').appendChild(p);
 document.getElementById('callerbtn-women').addEventListener('click', function () {
     let coinstring = document.getElementById('coin')
     let coinnumber = Number(coinstring.textContent)
-    let newcoin = coinnumber - 20;
-    document.getElementById('coin').innerText = newcoin;
+    
     if (coinnumber < 20) {
         alert("Invlid Coins")
         return
